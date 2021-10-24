@@ -17,7 +17,655 @@
 </head>
 
 <body>
-<p>Hello World, we are software developers</p>
+    <script src="script.js"></script>
+
+    <input type="checkbox" id="menu" />
+    <label for="menu" class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <nav class="nav" id="navbar">
+      <ul>
+        <header style="color: white; font-size: 1.5em; font-weight: thin; margin-left: 10px;">PHP Technical Documentation</header>
+        <li><a href="#Introduction_to_PHP" class="nav-link animated">Introduction to PHP</a></li>
+        <li><a href="#Basics_things_about_PHP" class="nav-link animated">Basics things about PHP</a></li>
+        <li><a href="#Data_types" class="nav-link animated">Data types</a></li>
+        <li><a href="#Variable_scope" class="nav-link animated">Variable scope</a></li>
+        <li><a href="#Loops" class="nav-link animated">Loops</a></li>
+        <li><a href="#Functions_in_PHP" class="nav-link animated">Functions in PHP</a></li>
+        <li><a href="#Reference" class="nav-link animated">Reference</a></li>
+      </ul>
+    </nav>
+    
+    <main id="main-doc">
+      <header>
+        
+        <div class="img">
+          <img style="width: 100%; height: 400px;" src="php.png" id="topPic" alt="intro" class="img-responsive">
+        </div>
+      </header>
+      <section class="main-section" id="Introduction_to_PHP">
+        <header>
+          <h1 class="naslov">Introduction to PHP</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <p><strong>PHP: Hypertext Preprocessor</strong> (or simply PHP) is a server-side scripting language designed for Web development, but also used as a general-purpose programming language. It was originally created by Rasmus Lerdorf in 1994, the PHP
+              reference implementation is now produced by The PHP Group. PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext Preprocessor.</p>
+    
+            <p>PHP code may be embedded into HTML code, or it can be used in combination with various web template systems, web content management systems, and web frameworks. PHP code is usually processed by a PHP interpreter implemented as a module in the
+              web server or as a Common Gateway Interface (CGI) executable. The web server combines the results of the interpreted and executed PHP code, which may be any type of data, including images, with the generated web page. PHP code may also be executed
+              with a command-line interface (CLI) and can be used to implement standalone graphical applications.</p>
+    
+            <p>The standard PHP interpreter, powered by the Zend Engine, is free software released under the PHP License. PHP has been widely ported and can be deployed on most web servers on almost every operating system and platform, free of charge.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              echo "My first PHP code line! :D"; 
+            &quest;&gt;
+          </code>
+    
+        </div>
+    
+      </section>
+
+      <section class="main-section" id="Basics_things_about_PHP">
+        <header>
+          <h1 class="naslov">Basics things about PHP</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <p>When you learn something new, it is very important to remember basic things about the stuff you're trying to learn. You know, the stuff you quite often omit that are very important. Like:</p>
+          </div>
+          <ul>
+            <li>Your text file must be saved with ".php" extension. Not with ".php.txt" but with just ".php". This is achieved by choosing option "all files" which is found under field where you type name of the file when you save. Then you add at the end of
+              file an extension.</li>
+            <li>Every php file i.e code inside it, start with left arrow "&lt;"</li>
+            <li>followed by question mark "&quest;"</li>
+            <li>then you add to it a string "php" which is followed by one empty space</li>
+            <li>which afterwards you can enter your php code.That how servers know it's a php code that it can executes it.</li>
+            <li>After you done with coding, make one empty space you, then you should close it with question mark "&quest;" followed with right arrow. "&gt;"</li>
+          </ul>
+          <div class="alert alert-warning">
+            <p>So it goes something like this: <code>&lt;&quest;php //yourPHPCodeGoesHere &quest;&gt;</code></p>
+            <p>Ofcourse <code class="cd">&lt;&quest;php</code>, your <code class="cd">code</code> and <code class="cd">&quest;&gt;</code> don't have to be on the same line. You can break it!</p>
+          </div>
+        </div>
+    
+      </section>
+
+      <section class="main-section" id="Data_types">
+        <header>
+          <h1 class="naslov">Data types</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <p id="dtypes">PHP supports the following data types:</p>
+          </div>
+          <ul>
+            <li>String</li>
+            <li>Integer</li>
+            <li>Float (floating point numbers - also called double)</li>
+            <li>Boolean</li>
+            <li>Array</li>
+            <li>Object</li>
+            <li>NULL</li>
+            <li>Resource</li>
+          </ul>
+          <div class="alert alert-warning">
+            <h3>PHP String</h3>
+            <p>A string is a sequence of characters, like "Hello world!".</p>
+    
+            <p>A string can be any text inside quotes. You can use single or double quotes:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $x = "Hello world!";
+              $y = 'Hello world!';
+    
+              echo $x;
+              echo "&lt;br&gt;"; 
+              echo $y;
+            &quest;&gt;
+          </code>
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Integer</h3>
+            <p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.</p>
+            <p>Rules for integers:</p>
+          </div>
+          <ul>
+            <li>An integer must have at least one digit</li>
+            <li>An integer must not have a decimal point</li>
+            <li>An integer can be either positive or negative</li>
+            <li>Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</li>
+          </ul>
+          <div class="alert alert-warning">
+            <p>In the following example $x is an integer. The PHP var_dump() function returns the data type and value:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $x = 5985;
+              var_dump($x);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Float</h3>
+            <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
+            <p>In the following example $x is a float. The PHP var_dump() function returns the data type and value:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $x = 10.365;
+              var_dump($x);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Boolean</h3>
+            <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+            <p>Booleans are often used in conditional testing.</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              $x = true;
+              $y = false;
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Array</h3>
+            <p>An array stores multiple values in one single variable.</p>
+            <p>In the following example $cars is an array. The PHP var_dump() function returns the data type and value:</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              $names = array("Johnny","Tom","Loyd");
+              var_dump($names);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Object</h3>
+            <p>An object is a data type which stores data and information on how to process that data.</p>
+            <p>In PHP, an object must be explicitly declared.</p>
+            <p>First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain properties and methods:</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              class Car {
+                function Car() {
+                    $this->model = "VW";
+                }
+              }
+    
+              // create an object
+              $herbie = new Car();
+    
+              // show object properties
+              echo $herbie->model;
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP NULL Value</h3>
+            <p>Null is a special data type which can have only one value: NULL.</p>
+            <p>A variable of data type NULL is a variable that has no value assigned to it.</p>
+            <p>If a variable is created without a value, it is automatically assigned a value of NULL.</p>
+            <p>Variables can also be emptied by setting the value to NULL:</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              $x = "Hello world!";
+              $x = null;
+              var_dump($x);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-success">
+            <h3>PHP Resource</h3>
+            <p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.</p>
+            <p>A common example of using the resource data type is a database call.</p>
+            <p>If a variable is created without a value, it is automatically assigned a value of NULL.</p>
+          </div>
+        </div>
+    
+      </section>
+      <section class="main-section" id="Variable_scope">
+        <header>
+          <h1 class="naslov">Variable scope</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <h3>What is "variable scope":</h3>
+            <p>Variable scope is known as its boundary within which it can be visible or accessed from code. In other words, it is the context within which a variable is defined. There are only two scopes available in PHP namely local and global scopes.</p>
+          </div>
+    
+          <ul>
+            <li>Local variables (local scope)</li>
+            <li>Global variables (special global scope)</li>
+            <li>Static variables (local scope)</li>
+            <li>Function parameters (local scope)</li>
+          </ul>
+    
+          <div class="alert alert-warning">
+            <p>When a variable is accessed outside its scope it will cause PHP error Undefined Variable.</p>
+          </div>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>Local Scope Variables</h3>
+            <p>A local scope is a restricted boundary of a variable within which code block it is declared. That block can be a function, class or any conditional span. The variable within this limited local scope is known as the local variable of that specific
+              code block.</p>
+            <p>The following code block shows a PHP function. We have declared a variable $count inside this function. This variable is said to be a local variable of this function and it is in the local scope of the function block.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function calculate_count() {
+              $count = 5;
+              //will print 5; the value of local variable
+              echo $count++; 
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>Local variables will be destroyed once the end of the code block is reached. Hence the same named variables can be declared within different local scopes.</p>
+          </div>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>Global Scope Variables</h3>
+            <p>As its name, the global scope provides widespread access to the variable declared in this scope. Variables in global scope can be accessed from anywhere from outside a function or class independent of its boundary.</p>
+            <p>PHP global variables can be defined by using <strong>global</strong> keyword. If we want to use global variables inside a function, we have to prefix the global keyword with the variable. The following code shows a code block to learn how to use
+              the global keyword with a PHP variable to declared it as a global variable.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $count = 0;
+              function calculate_count() {
+              global $count;
+              // will print 0 and increment global variable
+              echo $count++ . "&lt;br&gt;";
+              }
+              calculate_count();
+              echo $count;
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>PHP has a predefined <span class="strong">superglobal</span> variable called <strong>$GLOBALS</strong>. It is an associative array with the name of the variable as key and value as the array element. We can use this array variable to add an array
+              of PHP variables in a global scope.</p>
+            <p>Let us change the above example with the global keyword by using $GLOBALS superglobal to access the variable in global scope.</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              $count = 0;
+              function calculate_count() {
+              // will print 0 and increment global variable declared outside function
+              echo $GLOBALS["count"]++ . "&lt;br&sol;&gt;";
+              }
+              calculate_count();
+              echo $count;
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>Static Variables (local scope)</h3>
+            <p>A static variable is again a variable with local scope. But the difference with the regular local variable is that it is not destroyed outside the scope boundary. A variable can be defined by using the ‘static’ keyword inside a function.</p>
+            <p>A static variable <span class="svar">does not lose its value when the program execution goes past the scope boundary</span>. But it can be accessed only within that boundary. Let me demonstrate it using the following example code:
+            </p>
+          </div>
+          <code>
+            &lt;&quest;php
+              function counter(){
+                  static $count = 0;
+                  echo $count;
+                  $count++;
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>The above counter function has the static variable ‘count’ declared within its local scope. When the function execution is complete, the static count variable still retains its value for further computation. Every time the counter function is
+              called, the value of count is incremented. The count value is initialized only once on the first call.</p>
+          </div>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>Function Parameters (Local Scope)</h3>
+            <p>Function parameters (arguments) are local variables defined within the local scope of the function on which it is used as the argument.</p>
+            <h5>Scope and File Includes:</h5>
+            <p>The boundary of file includes does not demarcate the scope of variables. The scope of a variable is only governed by the function block and not based on the file include. A variable can be declared in a PHP file and used in another file by using
+              ‘include’ or ‘require’ that file.</p>
+            <h5>Function Inside Function or Class:</h5>
+            <p>Remember that the scope in PHP is governed by a function block. Any new function declared anywhere starts a new scope. If an anonymous function is defined inside another function, the anonymous function has its own local scope.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function foo() {
+                $fruit = 'apple';
+    
+                $bar = function () {
+                    // $fruit cannot be accessed inside here
+                    $animal = 'lion';
+                };
+    
+                // $animal cannot be accessed outside here
+            }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>In the above example code, $fruit variable is restricted to the outer function and its scope does not span inside the anonymous inner function. The same way, $animal which is declared inside is not accessible in the outer function as its scope
+              boundary is restricted to the inner function.</p>
+          </div>
+          <div class="alert alert-success">
+            <h5>General Note:</h5>
+            <p>Whenever you want to use a variable in a different scope, the way in and way out is by passing as an argument. Do not use global scoped variable for such trivial use cases.</p>
+          </div>
+    
+        </div>
+    
+      </section>
+      
+      <section class="main-section" id="Loops">
+        <header>
+          <h1 class="naslov">Loops</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <p>Loops are used to execute the same block of code again and again, until a certain condition is met. The basic idea behind a loop is to automate the repetitive tasks within a program to save the time and effort. PHP supports four different types
+              of loops:</p>
+          </div>
+          <ul>
+            <li>While — loops through a block of code until the condition is evaluate to true.</li>
+            <li>Do…While — the block of code executed once and then condition is evaluated. If the condition is true the statement is repeated as long as the specified condition is true.</li>
+            <li>For — loops through a block of code until the counter reaches a specified number.</li>
+            <li>Foreach — loops through a block of code for each element in an array.</li>
+          </ul>
+          <div class="alert alert-warning">
+            <h3>While Loop</h3>
+            <p>The while statement will loops through a block of code until the condition in the while statement evaluate to true.</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              while(condition){
+                // Code to be executed
+              }
+            &quest;&gt;
+          </code>
+          <p>The example below define a loop that starts with <code>$i=1</code>. The loop will continue to run as long as $i is less than or equal to 3. The <code>$i</code> will increase by 1 each time the loop runs:</p>
+          <code>
+            &lt;&quest;php
+              $i = 1;
+              while($i &lt;= 3){
+                  $i++;
+                  echo "The number is " . $i . " &lt;br&gt;";
+              }
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>Do…While Loop</h3>
+            <p>The do-while loop is a variant of while loop, which evaluates the condition at the end of each loop iteration. With a do-while loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is
+              repeated as long as the specified condition evaluated to is true.</p>
+          </div>
+          <code>
+            &lt;&quest;php
+              do{
+                  // Code to be executed
+              }
+              while(condition);
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>The following example define a loop that starts with $i=1. It will then increase $i with 1, and print the output. Then the condition is evaluated, and the loop will continue to run as long as $i is less than, or equal to 3.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $i = 1;
+              do{
+                  $i++;
+                  echo "The number is " . $i . "&lt;br&gt;";
+              }
+              while($i &lt;= 3);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-success">
+            <h5>Difference between While and Do…While Loop</h5>
+            <p>The while loop differs from the do-while loop in one important way — with a while loop, the condition to be evaluated is tested at the beginning of each loop iteration, so if the conditional expression evaluates to false, the loop will never be
+              executed.
+            </p>
+            <p>With a do-while loop, on the other hand, the loop will always be executed once, even if the conditional expression is false, because the condition is evaluated at the end of the loop iteration rather than the beginning.</p>
+          </div>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>For Loop</h3>
+            <p>The for loop repeats a block of code until a certain condition is met. It is typically used to execute a block of code for certain number of times.</p>
+          </div>
+          <code>
+            for(initialization; condition; increment){
+              // Code to be executed
+            }
+          </code>
+          <p>The parameters of for loop have following meanings:</p>
+          <ul>
+            <li>initialization — it is used to initialize the counter variables, and evaluated once unconditionally before the first execution of the body of the loop.</li>
+            <li>condition — in the beginning of each iteration, condition is evaluated. If it evaluates to true, the loop continues and the nested statements are executed. If it evaluates to false, the execution of the loop ends.</li>
+            <li>increment — it updates the loop counter with a new value. It is evaluate at the end of each iteration.</li>
+          </ul>
+          <p>The example below defines a loop that starts with $i=1. The loop will continued until $i is less than, or equal to 5. The variable $i will increase by 1 each time the loop runs:</p>
+          <code>
+            &lt;&quest;php
+              for($i=1; $i&lt;=3; $i++){
+                  echo "The number is " . $i . "&lt;br&gt;";
+              }
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>ForEach Loop</h3>
+            <p>The foreach loop is used to iterate over arrays.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              foreach($array as $value){
+                  // Code to be executed
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>The following example demonstrates a loop that will print the values of the given array:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $colors = array("Red", "Green", "Blue");
+     
+              // Loop through colors array
+              foreach($colors as $value){
+                  echo $value . " &lt;br&gt;";
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>There is one more syntax of foreach loop, which is extension of the first.</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              foreach($array as $key =&gt; $value){
+              // Code to be executed
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-success">
+            <h5>Example:</h5>
+          </div>
+          <code>
+            &lt;&quest;php 
+              $superhero = array(
+                  "name" =&gt; "Peter Parker",
+                  "email" =&gt; "peterparker@mail.com",
+                  "age" => 18
+              );
+    
+              // Loop through superhero array
+              foreach($superhero as $key =&gt; $value){
+                  echo $key . " : " . $value . "&lt;br&gt;";
+              }
+            &quest;&gt;
+          </code>
+        </div>
+    
+      </section>
+      
+      <section class="main-section" id="Functions_in_PHP">
+        <header>
+          <h1 class="naslov">Functions in PHP</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-warning">
+            <p>Besides PHP's built-in functions, there's also <strong>user defined functions.</strong></p>
+            <h3>User defined functions</h3>
+            <p>Their main qualities are:</p>
+          </div>
+          <ul>
+            <li>A function is a block of statements that can be used repeatedly in a program.</li>
+            <li>A function will not execute immediately when a page loads.</li>
+            <li>A function will be executed by a call to the function.</li>
+            <li>Any valid PHP code may appear inside a function, even other functions and class definitions.</li>
+            <li>Function can accept arguments and can also return a value "computed" by it.</li>
+            <li>A user-defined function declaration starts with the word function.</li>
+          </ul>
+          <div class="alert alert-warning">
+            <p>Function names follow the same rules as other labels in PHP. A valid function name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. As a regular expression, it would be expressed thus: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*.</p>
+            <p>Syntax is something like this:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function foo($arg_1, $arg_2, /* ..., */ $arg_n){
+                  echo "Example function.\n";
+                  return $retval;
+              }
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>In the example below, we create a function named "writeMsg()". The opening curly brace ( { ) indicates the beginning of the function code and the closing curly brace ( } ) indicates the end of the function. The function outputs "Hello world!".
+              To call the function, just write its name:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function writeMsg() {
+                  echo "Hello world!";
+              }
+    
+              writeMsg(); // call the function
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Function Arguments</h3>
+            <p>Information can be passed to functions through arguments. An argument is just like a variable.</p>
+            <p>Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.</p>
+            <p>The following example has a function with one argument ($fname). When the familyName() function is called, we also pass along a name (e.g. Jani), and the name is used inside the function, which outputs several different first names, but an equal
+              last name:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function familyName($fname) {
+              echo "$fname Refsnes.&lt;br&gt;";
+              }
+    
+              familyName("Jani");
+              familyName("Hege");
+              familyName("Stale");
+              familyName("Kai Jim");
+              familyName("Borge");
+            &quest;&gt;
+          </code>
+          <div class="alert alert-warning">
+            <p>The following example has a function with two arguments ($fname and $year):</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function familyName($fname, $year) {
+              echo "$fname Refsnes. Born in $year &lt;br&gt;";
+              }
+    
+              familyName("Hege", "1975");
+              familyName("Stale", "1978");
+              familyName("Kai Jim", "1983");
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Default Argument Value</h3>
+            <p>The following example shows how to use a default parameter. If we call the function setHeight() without arguments it takes the default value as argument:</p>
+    
+          </div>
+          <code>
+            &lt;&quest;php 
+              function setHeight($minheight = 50) {
+              echo "The height is : $minheight &lt;br&gt;";
+              }
+    
+              setHeight(350);
+              setHeight(); // will use the default value of 50
+              setHeight(135);
+              setHeight(80);
+            &quest;&gt;
+          </code>
+    
+          <hr>
+          <div class="alert alert-warning">
+            <h3>PHP Functions - Returning values</h3>
+            <p>To let a function return a value, use the <strong>return</strong> statement:</p>
+          </div>
+          <code>
+            &lt;&quest;php 
+              function sum($x, $y) {
+                  $z = $x + $y;
+                  return $z;
+              }
+    
+              echo "5 + 10 = " . sum(5, 10) . "&lt;br&gt;";
+              echo "7 + 13 = " . sum(7, 13) . "&lt;br&gt;";
+              echo "2 + 4 = " . sum(2, 4);
+            &quest;&gt;
+          </code>
+        </div>
+    
+      </section>
+      
+      <section class="main-section" id="Reference">
+        <header>
+          <h1 class="naslov">Reference</h1>
+        </header>
+        <div class="container">
+          <div class="alert alert-success">
+            <p>Sources:</p>
+            <div>
+              <ul>
+                <li><a href="https://www.w3schools.com/default.asp" target="_blank">W3Schools</a></li>
+                <li><a href="http://php.net/docs.php" target="_blank">php.net</a></li>
+                <li><a href="https://www.tutorialrepublic.com/" target="_blank">tutorialrepublic</a></li>
+              </ul>
+              <div>
+      </section>
+    </main>
 </body>
     <footer>
 
